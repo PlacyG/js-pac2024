@@ -1,0 +1,28 @@
+<html>
+<head>
+  <script type="text/javascript">
+    function Router(marka, kolor, przep) {
+      this.marka = marka;
+      this.kolor = kolor;
+      this.przepustowosc = przep;
+    }
+
+    Router.prototype.wypisz_pacyga = function () {
+      alert(this.marka + ' ' + this.kolor + ' ' + this.przepustowosc);
+    };
+
+    var router1 = new Router("TP Link", "Czarny", "1000MB/s");
+    var router2 = new Router('MaxEDGE', 'Biały', '10GB/s');
+
+    router1.wypisz_pacyga();
+    router2.wypisz_pacyga();
+
+    document.write("dostęp do właściwości" + "<br>");
+    document.write("router pierwszy: " + " " + router1.marka + " " + router1.kolor + " " + router1.przepustowosc);
+  </script>
+</head>
+<body>
+<br>
+Pacyga- programowanie obiektowe
+</body>
+</html
