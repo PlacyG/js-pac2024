@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>Zadanie JavaScript-40</title>
+<meta charset="utf-8">
+<style>
+h1 { text-transform: uppercase; }
+</style>
+</head>
+<body>
+<h1>Proste działania</h1> 
+<h3> Pacyga klasa 3F2 </h3>
+<br> 
+<br>
+<label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a">
+<br><br>
+<label for="b">Podaj drugą liczbę:</label> <input type="number" id="b">
+<br><br>
+<input type="button" value="DODAWANIE" onclick="suma_pac()">
+<input type="button" value="ODEJMOWANIE" onclick="roznica_pac()">
+<input type="button" value="MNOŻENIE" onclick="iloczyn_pac()">
+<input type="button" value="DZIELENIE" onclick="iloraz_pac()">
+<div id="wynik" style="margin-top:20px;"></div>
+<script>
+function suma_pac()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+var suma_pac = a + b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma_pac;
+}
+}
+function roznica_pac()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+var roznica_pac = a - b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica_pac;
+}
+}
+function iloczyn_pac()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+var iloczyn_pac = a * b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn_pac;
+}
+}
+function iloraz_pac()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+if (b == 0)
+{
+document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+}
+else
+{
+var iloraz_pac = a / b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz_pac;
+}
+}
+}
+</script>
+</body>
+</html>
