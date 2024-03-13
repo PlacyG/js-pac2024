@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wyświetlanie nazwiska lub imienia</title>
+</head>
+<body>
+  <script>
+    function wyswietl() {
+      var liczba = parseInt(document.getElementById('liczba').value);
+      var nazwisko = "Pacyga ";
+      var imie = "Filip ";
+      var liczba_liter_nazwiska = nazwisko.length;
+      var ile_razy_wyswietlic = (liczba_liter_nazwiska % 4) + 10;
+      var wielkosc_liter = (liczba_liter_nazwiska % 3) + 40;
+      if (liczba % 2 === 0) {
+        for (var i = 0; i < ile_razy_wyswietlic; i++) {
+          document.write('<div style="color: blue; font-size: ' + wielkosc_liter + 'px;">' + nazwisko.toUpperCase() + '</div>');
+        }
+      } else {
+        for (var j = 0; j < ile_razy_wyswietlic; j++) {
+          document.write('<div style="color: green; font-size: ' + wielkosc_liter + 'px;">' + imie.toUpperCase() + '</div>');
+        }
+      }
+    }
+  </script>
+  <label for="liczba">Podaj liczbę: </label>
+  <input type="number" id="liczba">
+  <button onclick="wyswietl()">Wyświetl</button>
+</body>
+</html>
