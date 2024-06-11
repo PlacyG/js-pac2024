@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <div style="color:red;font-size:50px;">
+        <script language="JavaScript">
+            silnia_koniec=parseFloat(prompt("koinec petli",""));
+            if(silnia_koniec==0){
+            document.write("silnia="+silnia_koniec);}
+            else if(silnia_koniec!==0){
+            var silnia_pac=1;
+            for(i_pac=1;i_pac<=silnia_koniec;i_pac++){
+                silnia_pac=silnia_pac*i_pac;
+            }
+            document.write("silnia="+silnia_pac);}
+        </script>
+        </div>
+    </body>
+</html>

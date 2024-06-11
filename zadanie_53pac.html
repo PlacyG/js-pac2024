@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head> 
+ <meta charset="utf-8">
+ <title> Przykład użycia pętli </title>
+ <script language="JavaScript">
+    var l1=prompt("ile liter nazwisko=","");
+    var l2=prompt("ile liter imie=","");
+    var imie_pac = parseFloat(l2);
+    var naz_pac = parseFloat(l1);
+    var a_pac = (naz_pac % 4) + 5;
+    var b_pac = (imie_pac % 6) + 20;
+    document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspb<br>");
+    for (var i_pac = 1; i_pac <= b_pac; i_pac++) {
+      document.write("*");
+    }
+    document.write("<br>");
+    for (var i_pac = 1; i_pac <= a_pac - 2; i_pac++) {
+      document.write("*");
+      for (var k_pac = 1; k_pac <= b_pac - 2; k_pac++) {
+        document.write("&nbsp;&nbsp;");
+      }
+      document.write("*<br>");
+    }
+    for (var i_pac = 1; i_pac <= b_pac; i_pac++) {
+      document.write("*");
+    }
+  </script>
+</body> 
+</html>
